@@ -2,21 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Fakultas;
+use App\Models\Mahasiswa;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class FakultasController extends Controller
+class MahasiswaController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $fakultas = Fakultas::all();
-        // dd($fakultas);
-      return view("fakultass.index")->with("fakultas",$fakultas);
-
+        $mahasiswa = Mahasiswa::all();
+        return view("mahasiswa.index")->with("mahasiswa", $mahasiswa);
     }
 
     /**
@@ -38,7 +36,7 @@ class FakultasController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Fakultas $fakultas)
+    public function show(Mahasiswa $mahasiswa)
     {
         //
     }
@@ -46,7 +44,7 @@ class FakultasController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Fakultas $fakultas)
+    public function edit(Mahasiswa $mahasiswa)
     {
         //
     }
@@ -54,7 +52,7 @@ class FakultasController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Fakultas $fakultas)
+    public function update(Request $request, Mahasiswa $mahasiswa)
     {
         //
     }
@@ -62,7 +60,7 @@ class FakultasController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Fakultas $fakultas)
+    public function destroy(Mahasiswa $mahasiswa)
     {
         //
     }

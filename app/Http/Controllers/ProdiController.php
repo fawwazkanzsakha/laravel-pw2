@@ -2,21 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Fakultas;
+use App\Models\prodi;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class FakultasController extends Controller
+class ProdiController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $fakultas = Fakultas::all();
-        // dd($fakultas);
-      return view("fakultass.index")->with("fakultas",$fakultas);
-
+        $prodi = Prodi::all();
+        return view("prodi.index")->with("prodi",$prodi);
+        //
     }
 
     /**
@@ -38,7 +37,7 @@ class FakultasController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Fakultas $fakultas)
+    public function show(prodi $prodi)
     {
         //
     }
@@ -46,7 +45,7 @@ class FakultasController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Fakultas $fakultas)
+    public function edit(prodi $prodi)
     {
         //
     }
@@ -54,7 +53,7 @@ class FakultasController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Fakultas $fakultas)
+    public function update(Request $request, prodi $prodi)
     {
         //
     }
@@ -62,7 +61,7 @@ class FakultasController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Fakultas $fakultas)
+    public function destroy(prodi $prodi)
     {
         //
     }
