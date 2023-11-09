@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,17 +5,17 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Spica Admin</title>
+  <title>fakultas</title>
   <!-- base:css -->
-  <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
-  <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
+  <link rel="stylesheet" href="{{ asset('vendors/mdi/css/materialdesignicons.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('vendors/css/vendor.bundle.base.css') }}">
   <!-- endinject -->
   <!-- plugin css for this page -->
   <!-- End plugin css for this page -->
   <!-- inject:css -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="{{ asset('css/style.css') }}">
   <!-- endinject -->
-  <link rel="shortcut icon" href="images/favicon.png" />
+  <link rel="shortcut icon" href="{{ asset('images/favicon.png') }}" />
 </head>
 <body>
   <div class="container-scroller d-flex">
@@ -29,32 +28,28 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="index.html">
-            <i class="mdi mdi-bank menu-icon"></i>
+            <i class="mdi mdi-bowling menu-icon"></i>
             <span class="menu-title">Dashboard</span>
-            <div class="badge badge-info badge-pill"></div>
           </a>
         </li>
-        <li class="nav-item">
+         <li class="nav-item">
           <a class="nav-link" href="{{url('fakultas')}}">
-            <i class="mdi mdi-code-equal menu-icon"></i>
-            <span class="menu-title">Fakultas</span>
-            <div class="badge badge-info badge-pill"></div>
+            <i class="mdi mdi-bulldozer menu-icon"></i>
+            <span class="menu-title">fakultas</span>
           </a>
-        </li><li class="nav-item">
+        </li>
+         <li class="nav-item">
           <a class="nav-link" href="{{url('prodi')}}">
-            <i class="mdi mdi-code-equal menu-icon"></i>
-            <span class="menu-title">Prodi</span>
-            <div class="badge badge-info badge-pill"></div>
+            <i class="mdi mdi-cash-usd menu-icon"></i>
+            <span class="menu-title">program studi</span>
           </a>
         </li>
-        </li><li class="nav-item">
+         <li class="nav-item">
           <a class="nav-link" href="{{url('mahasiswa')}}">
-            <i class="mdi mdi-account menu-icon"></i>
-            <span class="menu-title">Mahasiswa</span>
-            <div class="badge badge-info badge-pill"></div>
+            <i class="mdi mdi-clock menu-icon"></i>
+            <span class="menu-title">mahasiswa</span>
           </a>
         </li>
-
         <li class="nav-item sidebar-category">
           <p>Components</p>
           <span></span>
@@ -294,7 +289,7 @@
       <!-- partial -->
       <div class="main-panel">
         <div class="content-wrapper">
-          @yield('content')
+            @yield('content')
         </div>
         <!-- content-wrapper ends -->
         <!-- partial:./partials/_footer.html -->
