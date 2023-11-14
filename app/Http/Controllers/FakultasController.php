@@ -1,11 +1,8 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use App\Models\Fakultas;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
 class FakultasController extends Controller
 {
     /**
@@ -16,14 +13,13 @@ class FakultasController extends Controller
         $fakultas = Fakultas::all();
         // dd($fakultas);
       return view("fakultass.index")->with("fakultas",$fakultas);
-
     }
-
     /**
      * Show the form for creating a new resource.
      */
     public function create()
     {
+        //
         return view("fakultass.create");
     }
 
@@ -32,6 +28,7 @@ class FakultasController extends Controller
      */
     public function store(Request $request)
     {
+        //
         //dd($request);
 
         // validasi data input
@@ -52,7 +49,6 @@ class FakultasController extends Controller
     {
         //
     }
-
     /**
      * Show the form for editing the specified resource.
      */
@@ -60,7 +56,6 @@ class FakultasController extends Controller
     {
         //
     }
-
     /**
      * Update the specified resource in storage.
      */
@@ -68,7 +63,6 @@ class FakultasController extends Controller
     {
         //
     }
-
     /**
      * Remove the specified resource from storage.
      */

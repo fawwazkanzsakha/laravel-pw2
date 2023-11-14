@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Mahasiswa;
 use App\Http\Controllers\Controller;
+use GrahamCampbell\ResultType\Success;
 use Illuminate\Http\Request;
 
 class MahasiswaController extends Controller
@@ -22,7 +23,7 @@ class MahasiswaController extends Controller
      */
     public function create()
     {
-        //
+         return view("mahasiswa.create");
     }
 
     /**
@@ -30,7 +31,20 @@ class MahasiswaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validasi = $request-> validate([
+            "nmp" => "required|unique:mahasiswa",
+            "nama" => "required",
+            "tempat_lahir" =>"required",
+            "tanggal_lahir"=> "required",
+            "prodi_id"=> "required|",
+            "foto" => "required|image"
+        ]);
+
+        $ext = $request->images->getClientOriginalExtension();
+        $validasi["images"] =$request->npm.".".$ext;
+        $request->images->move(public_path('image'),$validasi["images"]);
+        Mahasiswa::create($validasi);
+        return redirect("mahasiswa")->with("Success","Data mahasiswa berhasil disimpan");
     }
 
     /**
